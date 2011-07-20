@@ -1,0 +1,9 @@
+image-id: ami-06ad526f
+size: small
+inbound-ports:
+  - 22
+  - 80
+  - 81
+  - 443
+
+provision: none
