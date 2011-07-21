@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+# Install zsh, emacs 24, and tmux-shared
+#
+
+pushd ~/
+
+
+# Common
+sudo apt-get update
+sudo apt-get install -y build-essential unzip zsh git-core
+
+# Emacs 24
+sudo apt-get install -y automake autoconf texinfo libncurses-dev
+
+
+pushd ~/
+git clone --depth 1 git://repo.or.cz/emacs.git
+popd
+
+
+pushd ~/emacs
+./autogen.sh
+sudo ./configure
+sudo make bootstrap
+sudo make install
+popd
+
+
+# tmux-shared
+pushd ~/
+sudo wget http://dl.dropbox.com/u/5642669/tmux-shared
+sudo chmod a+x ./tmux-shared
+sudo mv ./tmux-shared /usr/bin/
+popd
+
+popd # ~/
+
+
