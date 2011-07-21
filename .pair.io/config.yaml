@@ -1,4 +1,4 @@
-pairio-image: 4e27456ae4b0773385da584d-zkim-zkim/pairio-quickstart-base
+image-id: ami-57c90e3e
 size: small
 inbound-ports:
   - 22
