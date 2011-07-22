@@ -1,4 +1,8 @@
-image-id: ami-57c90e3e
+
+pairio-image: 4e27456ae4b0773385da584d-zkim-zkim/pairio-quickstart-base
+
+# Base image for 32 bit quickstarts - alestic's natty us-east image.
+#image-id: ami-57c90e3e
 size: small
 inbound-ports:
   - 22
